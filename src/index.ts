@@ -36,7 +36,7 @@ async function bootstrap() {
   app.use(passport.initialize());
   app.use(passport.session());
 
-  app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+  // app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
   app.get('/auth/google/callback',
     passport.authenticate('google', { failureRedirect: '/' }),
@@ -49,7 +49,7 @@ async function bootstrap() {
     res.send(`Hello ${(req.user as { username?: string }).username ?? 'Guest'}`);
   });
 
-  app.use('/api/auth', authRoutes);
+  app.use('/auth', authRoutes);
 
   app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'ejs');

@@ -5,7 +5,7 @@ const handleLogin = (req: Request, res: Response, next: NextFunction)=>{
 }
 
 const handleRedirect = (req: Request, res: Response, next: NextFunction)=>{
-    res.send('ok');
+    return res.status(200).render('home');
 }
 
 

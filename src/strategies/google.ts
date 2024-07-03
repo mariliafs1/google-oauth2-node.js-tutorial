@@ -21,9 +21,6 @@ passport.use(new GoogleStrategy({
   }
 ));
 
-//AIzaSyDL_4QzXK1_QR2hJ-zYzFCmUKPWm5HZN24
-
-//api key AIzaSyDcaZyEjJSVteal4FLGZH953ooNiK2L-Ic
 
 // {
 //     id: '111827847086356829635',
